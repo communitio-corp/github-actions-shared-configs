@@ -1,1 +1,5 @@
 # github-actions-shared-configs
+
+```diff
+- WARNING: THIS IS A PUBLIC REPOSITORY. DO NOT COMMIT ANYTHING THAT CAN NOT BE SHARED.
+```
