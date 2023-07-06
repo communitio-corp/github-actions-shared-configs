@@ -1,0 +1,64 @@
+name-template: "$RESOLVED_VERSION"
+tag-template: "release/$RESOLVED_VERSION"
+change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
+change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
+
+categories:
+  - title: "Features"
+    labels:
+      - "pr-type: feature"
+  - title: "Bug Fixes"
+    labels:
+      - "pr-type: bugfix"
+  - title: "Improvements"
+    labels:
+      - "pr-type: enhancement"
+      - "pr-type: refactoring"
+  - title: "Maintenance"
+    labels:
+      - "pr-type: chore"
+
+autolabeler:
+  - label: "pr-type: feature"
+    branch:
+      - '/feature\/.+/'
+    title:
+      - "/feature/i"
+  - label: "pr-type: bugfix"
+    branch:
+      - '/bugfix\/.+/'
+      - '/hotfix\/.+/'
+    title:
+      - "/bugfix/i"
+      - "/hotfix/i"
+  - label: "pr-type: enhancement"
+    branch:
+      - '/enhancement\/.+/'
+    title:
+      - "/enhancement/i"
+  - label: "pr-type: refactoring"
+    branch:
+      - '/refactoring\/.+/'
+    title:
+      - "/refactoring/i"
+  - label: "pr-type: chore"
+    branch:
+      - '/chore\/.+/'
+    title:
+      - "/chore/i"
+
+version-resolver:
+  major:
+    labels:
+      - "version-up: major"
+  minor:
+    labels:
+      - "version-up: minor"
+  patch:
+    labels:
+      - "version-up: patch"
+  default: patch
+
+template: |
+  ## Changes
+  $CHANGES
