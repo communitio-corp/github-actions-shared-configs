@@ -13,7 +13,7 @@ categories:
   - title: "🧯HotFixes"
     labels:
       - "pr-type: bugfix"
-  - title: "🧰Chore"
+  - title: "🔧Chore"
     labels:
       - "pr-type: chore"
 
