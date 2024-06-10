@@ -4,17 +4,16 @@ change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
 change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
 
 categories:
-  - title: "Features"
+  - title: "🚀Features"
     labels:
       - "pr-type: feature"
-  - title: "Bug Fixes"
+  - title: "🐛BugFixes"
     labels:
       - "pr-type: bugfix"
-  - title: "Improvements"
+  - title: "🧯HotFixes"
     labels:
-      - "pr-type: enhancement"
-      - "pr-type: refactoring"
-  - title: "Maintenance"
+      - "pr-type: bugfix"
+  - title: "🧰Chore"
     labels:
       - "pr-type: chore"
 
@@ -27,20 +26,13 @@ autolabeler:
   - label: "pr-type: bugfix"
     branch:
       - '/bugfix\/.+/'
-      - '/hotfix\/.+/'
     title:
       - "/bugfix/i"
+  - label: "pr-type: hotfix"
+    branch:
+      - '/hotfix\/.+/'
+    title:
       - "/hotfix/i"
-  - label: "pr-type: enhancement"
-    branch:
-      - '/enhancement\/.+/'
-    title:
-      - "/enhancement/i"
-  - label: "pr-type: refactoring"
-    branch:
-      - '/refactoring\/.+/'
-    title:
-      - "/refactoring/i"
   - label: "pr-type: chore"
     branch:
       - '/chore\/.+/'
