@@ -12,7 +12,7 @@ categories:
       - "pr-type: bugfix"
   - title: "🧯HotFixes"
     labels:
-      - "pr-type: bugfix"
+      - "pr-type: hotfix"
   - title: "🔧Chore"
     labels:
       - "pr-type: chore"
