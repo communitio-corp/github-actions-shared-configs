@@ -10,7 +10,7 @@ categories:
   - title: "🐛BugFixes"
     labels:
       - "pr-type: bugfix"
-  - title: "🧯HotFixes"
+  - title: "🧯HotFixes \n> [!WARNING]\n> hotfixを含むリリースのリリースノートにはリリースに含まれるPRが記載されていない場合があります。\n> Publish する際に `Generate release notes` 等でリリースノートを編集してください。"
     labels:
       - "pr-type: hotfix"
   - title: "🔧Chore"
@@ -53,4 +53,5 @@ version-resolver:
 
 template: |
   ## Changes
+
   $CHANGES
