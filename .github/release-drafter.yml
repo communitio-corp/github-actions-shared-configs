@@ -42,13 +42,13 @@ autolabeler:
 version-resolver:
   major:
     labels:
-      - "version-up: major"
+      - "version-up/major"
   minor:
     labels:
-      - "version-up: minor"
+      - "version-up/minor"
   patch:
     labels:
-      - "version-up: patch"
+      - "version-up/patch"
   default: patch
 
 template: |
