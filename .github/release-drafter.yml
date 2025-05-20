@@ -3,6 +3,7 @@ tag-template: "release/$RESOLVED_VERSION"
 change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
 change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
 
+# TODO: PR/... のタグで判定するようにする
 categories:
   - title: "🚀Features"
     labels:
@@ -38,17 +39,37 @@ autolabeler:
       - '/chore\/.+/'
     title:
       - "/chore/i"
+  - label: "PR/feature"
+    branch:
+      - '/feature\/.+/'
+    title:
+      - "/feature/i"
+  - label: "PR/bugfix"
+    branch:
+      - '/bugfix\/.+/'
+    title:
+      - "/bugfix/i"
+  - label: "PR/hotfix"
+    branch:
+      - '/hotfix\/.+/'
+    title:
+      - "/hotfix/i"
+  - label: "PR/chore"
+    branch:
+      - '/chore\/.+/'
+    title:
+      - "/chore/i"
 
 version-resolver:
   major:
     labels:
-      - "version-up/major"
+      - "VersionUp/major"
   minor:
     labels:
-      - "version-up/minor"
+      - "VersionUp/minor"
   patch:
     labels:
-      - "version-up/patch"
+      - "VersionUp/patch"
   default: patch
 
 template: |
