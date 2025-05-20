@@ -39,26 +39,26 @@ autolabeler:
       - '/chore\/.+/'
     title:
       - "/chore/i"
-  - label: "PR/feature"
-    branch:
-      - '/feature\/.+/'
-    title:
-      - "/feature/i"
-  - label: "PR/bugfix"
-    branch:
-      - '/bugfix\/.+/'
-    title:
-      - "/bugfix/i"
-  - label: "PR/hotfix"
-    branch:
-      - '/hotfix\/.+/'
-    title:
-      - "/hotfix/i"
-  - label: "PR/chore"
-    branch:
-      - '/chore\/.+/'
-    title:
-      - "/chore/i"
+  # - label: "PR/feature"
+  #   branch:
+  #     - '/feature\/.+/'
+  #   title:
+  #     - "/feature/i"
+  # - label: "PR/bugfix"
+  #   branch:
+  #     - '/bugfix\/.+/'
+  #   title:
+  #     - "/bugfix/i"
+  # - label: "PR/hotfix"
+  #   branch:
+  #     - '/hotfix\/.+/'
+  #   title:
+  #     - "/hotfix/i"
+  # - label: "PR/chore"
+  #   branch:
+  #     - '/chore\/.+/'
+  #   title:
+  #     - "/chore/i"
 
 version-resolver:
   major:
