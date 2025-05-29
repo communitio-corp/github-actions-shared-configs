@@ -3,20 +3,24 @@ tag-template: "release/$RESOLVED_VERSION"
 change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
 change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
 
-# TODO: PR/... のタグで判定するようにする
 categories:
   - title: "🚀Features"
     labels:
       - "pr-type: feature"
+      - "feature"
   - title: "🐛BugFixes"
     labels:
       - "pr-type: bugfix"
+      - "bugfix"
   - title: "🧯HotFixes \n> [!WARNING]\n> hotfixを含むリリースのリリースノートにはリリースに含まれるPRが記載されていない場合があります。\n> Publish する際に `Generate release notes` 等でリリースノートを編集してください。"
     labels:
       - "pr-type: hotfix"
+      - "hotfix"
   - title: "🔧Chore"
     labels:
       - "pr-type: chore"
+      - "chore"
+      - "dependencies" # dependabot の PR
 
 autolabeler:
   - label: "pr-type: feature"
@@ -39,22 +43,22 @@ autolabeler:
       - '/chore\/.+/'
     title:
       - "/chore/i"
-  # - label: "PR/feature"
+  # - label: "feature"
   #   branch:
   #     - '/feature\/.+/'
   #   title:
   #     - "/feature/i"
-  # - label: "PR/bugfix"
+  # - label: "bugfix"
   #   branch:
   #     - '/bugfix\/.+/'
   #   title:
   #     - "/bugfix/i"
-  # - label: "PR/hotfix"
+  # - label: "hotfix"
   #   branch:
   #     - '/hotfix\/.+/'
   #   title:
   #     - "/hotfix/i"
-  # - label: "PR/chore"
+  # - label: "chore"
   #   branch:
   #     - '/chore\/.+/'
   #   title:
