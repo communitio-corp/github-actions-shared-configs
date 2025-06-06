@@ -7,19 +7,15 @@ categories:
   - title: "🚀Features"
     labels:
       - "pr-type: feature"
-      - "feature"
   - title: "🐛BugFixes"
     labels:
       - "pr-type: bugfix"
-      - "bugfix"
   - title: "🧯HotFixes \n> [!WARNING]\n> hotfixを含むリリースのリリースノートにはリリースに含まれるPRが記載されていない場合があります。\n> Publish する際に `Generate release notes` 等でリリースノートを編集してください。"
     labels:
       - "pr-type: hotfix"
-      - "hotfix"
   - title: "🔧Chore"
     labels:
       - "pr-type: chore"
-      - "chore"
       - "dependencies" # dependabot の PR
 
 autolabeler:
@@ -43,37 +39,17 @@ autolabeler:
       - '/chore\/.+/'
     title:
       - "/chore/i"
-  # - label: "feature"
-  #   branch:
-  #     - '/feature\/.+/'
-  #   title:
-  #     - "/feature/i"
-  # - label: "bugfix"
-  #   branch:
-  #     - '/bugfix\/.+/'
-  #   title:
-  #     - "/bugfix/i"
-  # - label: "hotfix"
-  #   branch:
-  #     - '/hotfix\/.+/'
-  #   title:
-  #     - "/hotfix/i"
-  # - label: "chore"
-  #   branch:
-  #     - '/chore\/.+/'
-  #   title:
-  #     - "/chore/i"
 
 version-resolver:
   major:
     labels:
-      - "VersionUp/major"
+      - "version-up: major"
   minor:
     labels:
-      - "VersionUp/minor"
+      - "version-up: minor"
   patch:
     labels:
-      - "VersionUp/patch"
+      - "version-up: patch"
   default: patch
 
 template: |
