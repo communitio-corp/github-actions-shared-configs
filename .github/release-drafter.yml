@@ -6,35 +6,35 @@ change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add
 categories:
   - title: "🚀Features"
     labels:
-      - "pr-type: feature"
+      - "pr: feature"
   - title: "🐛BugFixes"
     labels:
-      - "pr-type: bugfix"
+      - "pr: bugfix"
   - title: "🧯HotFixes \n> [!WARNING]\n> hotfixを含むリリースのリリースノートにはリリースに含まれるPRが記載されていない場合があります。\n> Publish する際に `Generate release notes` 等でリリースノートを編集してください。"
     labels:
-      - "pr-type: hotfix"
+      - "pr: hotfix"
   - title: "🔧Chore"
     labels:
-      - "pr-type: chore"
+      - "pr: chore"
       - "dependencies" # dependabot の PR
 
 autolabeler:
-  - label: "pr-type: feature"
+  - label: "pr: feature"
     branch:
       - '/feature\/.+/'
     title:
       - "/feature/i"
-  - label: "pr-type: bugfix"
+  - label: "pr: bugfix"
     branch:
       - '/bugfix\/.+/'
     title:
       - "/bugfix/i"
-  - label: "pr-type: hotfix"
+  - label: "pr: hotfix"
     branch:
       - '/hotfix\/.+/'
     title:
       - "/hotfix/i"
-  - label: "pr-type: chore"
+  - label: "pr: chore"
     branch:
       - '/chore\/.+/'
     title:
